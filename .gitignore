@@ -3,3 +3,6 @@
 .RData
 .Ruserdata
 iBats.Rproj
+.Rdata
+.httr-oauth
+.DS_Store
