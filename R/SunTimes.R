@@ -2,13 +2,16 @@
 #'
 #' Calculates the sunrise and sunset times for bat observations by Night (dusk to dawn). The function uses the package suncalcs to make sunset and sunrise columns for each Night and the location based on the Latitude and Longitude of the bat observation.
 #'
-#' @param bat_df bat data frame with DateTime, Latitude and Longitude columns
+#' @param bat_df bat data frame with Night, Latitude and Longitude columns
 #'
 #' @return night and suntimes data frame
 #'
 #' @examples
-#'  bat_data_frame <- tibble(DateTime = Sys.time(), Latitude = 51.5023, Longitude = -0.1352)
+#' bat_data_frame <- tibble(Night = Sys.Date(), Latitude = 51.5023, Longitude = -0.1352)
 #' SunTimes(bat_data_frame)
+#'
+#' bat_data_frame <- tibble(Night = Sys.Date(), Latitude = -6.1370, Longitude = 106.8497)
+#' SunTimes(bat_data_frame, time_zone = "Asia/Jakarta")
 #'
 #' @export
 SunTimes <- function(bat_df, time_zone = "Europe/London"){
@@ -20,6 +23,10 @@ SunTimes <- function(bat_df, time_zone = "Europe/London"){
      "Latitude" %in% bat_df_col_names &
      "Longitude" %in% bat_df_col_names) {
 
+    bat_df$Night <- lubridate::force_tz(bat_df$Night, tzone = time_zone)
+
+    bat_df$Night <- lubridate::as_date(bat_df$Night)
+
     num_nights <- No_Nights(bat_df$Night)
 
 
@@ -29,10 +36,11 @@ SunTimes <- function(bat_df, time_zone = "Europe/London"){
                           by='days')
 
     # Get suntimes for date vector and Location (Latitude and Longitude)
-    setdata <- getSunlightTimes(date = nightlist,
-                                lat = median(bat_df$Latitude, na.rm = T),
-                                lon = median(bat_df$Longitude, na.rm = T),
-                                tz = time_zone)
+    suncalc::getSunlightTimes(date = nightlist,
+                              lat = median(bat_df$Latitude, na.rm = T),
+                              lon = median(bat_df$Longitude, na.rm = T),
+                              keep = c("sunrise", "sunset"),
+                              tz = time_zone)
 
   } else {
 
