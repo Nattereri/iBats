@@ -13,12 +13,14 @@ date_time_info(bat_df, time_zone = "Europe/London")
 Night, Month, MonthFull, Year, JustTime
 }
 \description{
-Creates useful date and time information (Night, Month, MonthFull, Year, JustTime) 
-from the DateTime column, as extra columns in the data frame, from the date 
-and time of the bat observation
+Creates useful date and time information (Night, Month, MonthFull, Year, JustTime)
+from the DateTime column, as extra columns in the data frame, from the date
+and time of the bat observation. The default IANA time zone is "Europe/London".
 }
 \examples{
-bat_data_frame <- tibble(DateTime = c(lubridate::ymd_hms("20220801 23:30:00")))
+bat_data_frame <- tibble(DateTime = Sys.time())
 date_time_info(bat_data_frame)
+
+date_time_info(bat_data_frame, time_zone = "Asia/Jakarta")
 
 }
