@@ -2,5 +2,6 @@
 
 export(No_Nights)
 export(SunTimes)
+export(bat_colours)
 export(date_time_info)
 export(make_scientific)

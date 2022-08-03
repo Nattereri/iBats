@@ -11,4 +11,4 @@ Encoding: UTF-8
 LazyData: true
 URL: https://github.com/Nattereri/iBats
 BugReports: https://github.com/Nattereri/iBats/issues
-RoxygenNote: 7.2.0
+RoxygenNote: 7.2.1

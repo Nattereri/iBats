@@ -7,7 +7,7 @@
 SunTimes(bat_df, time_zone = "Europe/London")
 }
 \arguments{
-\item{bat_df}{bat data frame with DateTime, Latitude and Longitude columns}
+\item{bat_df}{bat data frame with Night, Latitude and Longitude columns}
 }
 \value{
 night and suntimes data frame
@@ -16,7 +16,10 @@ night and suntimes data frame
 Calculates the sunrise and sunset times for bat observations by Night (dusk to dawn). The function uses the package suncalcs to make sunset and sunrise columns for each Night and the location based on the Latitude and Longitude of the bat observation.
 }
 \examples{
- bat_data_frame <- tibble(DateTime = Sys.time(), Latitude = 51.5023, Longitude = -0.1352)
+bat_data_frame <- tibble(Night = Sys.Date(), Latitude = 51.5023, Longitude = -0.1352)
 SunTimes(bat_data_frame)
+
+bat_data_frame <- tibble(Night = Sys.Date(), Latitude = -6.1370, Longitude = 106.8497)
+SunTimes(bat_data_frame, time_zone = "Asia/Jakarta")
 
 }
