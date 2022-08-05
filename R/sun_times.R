@@ -4,17 +4,17 @@
 #'
 #' @param bat_df bat data frame with Night, Latitude and Longitude columns
 #'
-#' @return night and suntimes data frame
+#' @return night and sun times data frame
 #'
 #' @examples
 #' bat_data_frame <- tibble(Night = Sys.Date(), Latitude = 51.5023, Longitude = -0.1352)
-#' SunTimes(bat_data_frame)
+#' sun_times(bat_data_frame)
 #'
 #' bat_data_frame <- tibble(Night = Sys.Date(), Latitude = -6.1370, Longitude = 106.8497)
-#' SunTimes(bat_data_frame, time_zone = "Asia/Jakarta")
+#' sun_times(bat_data_frame, time_zone = "Asia/Jakarta")
 #'
 #' @export
-SunTimes <- function(bat_df, time_zone = "Europe/London"){
+sun_times <- function(bat_df, time_zone = "Europe/London"){
 
   #check column names
   bat_df_col_names <- colnames(bat_df)
