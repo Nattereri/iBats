@@ -18,7 +18,7 @@ of sunset and shifts the the column up one row to to make the sunrise for the Ni
 (it will do but not yet - fudged at the moment).
 }
 \examples{
-NightSunTimes
+night_sun_times
 
 
 

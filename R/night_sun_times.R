@@ -10,7 +10,7 @@
 #' @return bat data frame with un set and sun rise times by Night
 #'
 #' @examples
-#' NightSunTimes
+#' night_sun_times
 #'
 #'
 #'
