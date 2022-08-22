@@ -40,6 +40,6 @@ night_sun_times <- function(bat_df, sun_df) {
   colnames(sun_data) <- c("Night", "sunset", "sunrise")
 
   # Join bat data with the sundata by Night
-  dplyr::left_join(bat_clean_data, sun_data, by="Night")
+  dplyr::left_join(bat_df, sun_data, by="Night")
 
 }
