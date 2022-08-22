@@ -15,7 +15,7 @@ bat data frame with un set and sun rise times by Night
 \description{
 Merges sunset and sunrise times to the bat data frame by Night. Makes a duplicate
 of sunset and shifts the the column up one row to to make the sunrise for the Night
-(it will do but not yet - fudged at the moment).
+(it will do but not yet - slightly fudged at the moment).
 }
 \examples{
 night_sun_times

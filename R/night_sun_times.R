@@ -2,7 +2,7 @@
 #'
 #' Merges sunset and sunrise times to the bat data frame by Night. Makes a duplicate
 #' of sunset and shifts the the column up one row to to make the sunrise for the Night
-#' (it will do but not yet - fudged at the moment).
+#' (it will do but not yet - slightly fudged at the moment).
 #'
 #' @param bat_df bat data frame with Night column
 #' @sun_df data frame of sun set and sun rise times by Day
