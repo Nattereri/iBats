@@ -1,12 +1,16 @@
 Package: iBats
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Title: Helps The Analysis Of Data Collected From Bat Detectors Post Sound Identification
+Version: 0.0.0.9000
+Author: Authors@R: person("Steve", "Markham", email = "markhamsteve24@gmail.com",
+                  role = c("aut", "cre"))
+Maintainer: The package maintainer <markhamsteve24@gmail.com>
+Description: iBats is a package with a range of functions that hopefully enhances 
+    and smooths the data science of bat data collected from bat detectors post 
+    sound identification. It compliments the data science chapters of the forthcoming 
+    BCT Bat Survey Guidelines 4th Edition. 
+Depends: R (>= 4.0.0)
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 URL: https://github.com/Nattereri/iBats

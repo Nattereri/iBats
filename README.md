@@ -1,4 +1,4 @@
-This __iBats__ package is designed to help bat ecologists with the _Data Science_ of bat detector surveys.
+_iBats_ is a package with a range of functions that hopefully enhances and smooths the _data science_ of bat data collected from bat detectors post sound identification.
 
 ## Installation
 

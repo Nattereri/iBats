@@ -5,7 +5,7 @@
 #' (it will do but not yet - slightly fudged at the moment).
 #'
 #' @param bat_df bat data frame with Night column
-#' @sun_df data frame of sun set and sun rise times by Day
+#' @param sun_df data frame of sun set and sun rise times by Day
 #'
 #' @return bat data frame with un set and sun rise times by Night
 #'

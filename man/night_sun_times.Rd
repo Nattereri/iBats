@@ -8,6 +8,8 @@ night_sun_times(bat_df, sun_df)
 }
 \arguments{
 \item{bat_df}{bat data frame with Night column}
+
+\item{sun_df}{data frame of sun set and sun rise times by Day}
 }
 \value{
 bat data frame with un set and sun rise times by Night
