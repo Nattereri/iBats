@@ -17,6 +17,8 @@
 #' @export
 date_time_info <- function(bat_df, time_zone = "Europe/London") {
 
+  stopifnot("df_with_date must be data frame" =  is.data.frame(bat_df))
+
   #check column names
   bat_df_col_names <- colnames(bat_df)
 
