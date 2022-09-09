@@ -17,6 +17,9 @@
 #' @export
 bat_colours <- function(bat_column_to_graph, colour_vector = bat_colours){
 
+  stopifnot("Input must be character vector" =  is.character(bat_column_to_graph))
+  stopifnot("Input must be character vector" =  is.character(colour_vector))
+
   graph_bat_list <- levels(factor(bat_column_to_graph))
 
   #Subset named vector

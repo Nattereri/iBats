@@ -12,19 +12,12 @@
 #'
 #' @export
 No_Nights <- function(night_vector){
-  
-  if(lubridate::is.Date(night_vector)) {
-    
-    as.integer(difftime(max(night_vector, na.rm = T) , 
-                        min(night_vector, na.rm = T) , 
-                        units = c("days"))) + 1
-    
-  } else {
-    
-    print("Night is not in Date format")
-    
-  }
-  
-  
+
+  stopifnot("Night is not in Date format" =  lubridate::is.Date(night_vector))
+
+  as.integer(difftime(max(night_vector, na.rm = T) ,
+                      min(night_vector, na.rm = T) ,
+                      units = c("days"))) + 1
+
 }
 
