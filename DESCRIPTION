@@ -9,7 +9,19 @@ Description: iBats is a package with a range of functions that hopefully enhance
     and smooths the data science of bat data collected from bat detectors post 
     sound identification. It compliments the data science chapters of the forthcoming 
     BCT Bat Survey Guidelines 4th Edition. 
-Depends: R (>= 4.0.0)
+Depends: 
+    R (>= 4.0.0)
+Imports:
+    dplyr,
+    forcats,
+    ggplot2,
+    hms,
+    lubridate,
+    magrittr,
+    stringr,
+    suncalc,
+    tibble,
+    tidyr
 License: GPL-3
 Encoding: UTF-8
 LazyData: true

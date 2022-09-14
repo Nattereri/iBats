@@ -17,6 +17,8 @@
 #' @export
 night_time_metrics <- function(bat_df) {
 
+  stopifnot("Input must be data frame" =  is.data.frame(bat_df))
+
   bat_df %>%
     mutate(post_set_min = as.numeric(difftime(DateTime, sunset, units='mins')),
            pre_rise_min = as.numeric(difftime(sunrise, DateTime, units='mins')),

@@ -17,12 +17,18 @@
 #' @export
 date_time_info <- function(bat_df, time_zone = "Europe/London") {
 
+  # check data is data.frame
   stopifnot("df_with_date must be data frame" =  is.data.frame(bat_df))
 
-  #check column names
+  #check column names have DateTime column
   bat_df_col_names <- colnames(bat_df)
+  stopifnot("DateTime column must be data frame" =  ("DateTime" %in% bat_df_col_names))
 
-  if("DateTime" %in% bat_df_col_names) {
+  #check DateTime column
+  stopifnot("Input must have DateTime column" =  lubridate::is.POSIXct(bat_df$DateTime))
+
+
+  #if("DateTime" %in% bat_df_col_names) {
 
     bat_df %>%
       mutate(DateTime = lubridate::force_tz(DateTime, time_zone),
@@ -37,10 +43,10 @@ date_time_info <- function(bat_df, time_zone = "Europe/London") {
 
 
 
-  } else {
+  #} else {
 
-    print("No date time column present")
+   # print("No date time column present")
 
-  }
+  #}
 
 }

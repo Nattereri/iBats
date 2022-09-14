@@ -18,6 +18,9 @@
 #' @export
 night_sun_times <- function(bat_df, sun_df) {
 
+  stopifnot("Input must be data frame" =  is.data.frame(bat_df))
+  stopifnot("Input must be data frame" =  is.data.frame(sun_df))
+
   # Duplicate data.frame to make sunrise data
   risedata <- sun_df
 
