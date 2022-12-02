@@ -5,7 +5,7 @@
 \alias{BatExplorer}
 \title{Data exported from Elekon AG Bat Explorer software with call metrics}
 \format{
-An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 43 rows and 13 columns.
+An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 28 rows and 13 columns.
 }
 \usage{
 data(BatExplorer)
