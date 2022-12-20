@@ -4,10 +4,16 @@
 \alias{bat_colours}
 \title{Helps assigns a bat species the same colour in graphs}
 \usage{
-bat_colours(bat_column_to_graph, colour_vector = bat_colours)
+bat_colours(
+  bat_column_to_graph,
+  colour_vector = bat_colours,
+  default_colours_sci = FALSE
+)
 }
 \arguments{
 \item{colour_vector}{A named vector of 'all' bat species and an assigned colour}
+
+\item{default_colours_sci}{TRUE for default colours UK scientific names only}
 
 \item{bat_column}{Vector of bat species to be graphed and assigned a species colour}
 }
@@ -21,6 +27,9 @@ Assigns a bat species the same colour so graphs can be consistent (i.e. same col
 bat_colours <- c("Barbastelle" = "#1f78b4", "Common pipistrelle" = "#ffff99", "Myotis" = "#BCEE68", "Natterer's" = "#ff7f00")
 bat_column_to_graph <- c("Myotis", "Common pipistrelle", "Common pipistrelle", "Barbastelle", "Natterer's")
 bat_colours(bat_column_to_graph, colour_vector = bat_colours)
+
+bat_column_to_graph <- c("Barbastella barbastellus", "Myotis daubentonii", "Pipistrellus pygmaeus", "Pipistrellus pygmaeus")
+bat_colours(bat_column_to_graph, colour_vector = NULL, default_colours_sci = TRUE)
 
 scales::show_col(bat_colours(bat_column_to_graph, colour_vector = bat_colours))
 
