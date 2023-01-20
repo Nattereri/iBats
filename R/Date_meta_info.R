@@ -31,7 +31,7 @@ date_time_info <- function(bat_df, time_zone = "Europe/London") {
   #if("DateTime" %in% bat_df_col_names) {
 
     bat_df %>%
-      mutate(DateTime = lubridate::force_tz(DateTime, time_zone),
+      dplyr::mutate(DateTime = lubridate::force_tz(DateTime, time_zone),
              Night = DateTime - lubridate::hours(12), # DateTime minus 12 hours
              Night = lubridate::as_date(Night), # Make Night variable just a date
              Month = lubridate::month(Night, label = T), # Make Month of observation

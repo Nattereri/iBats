@@ -22,5 +22,4 @@ night_time_metrics
 
 
 
-
 }

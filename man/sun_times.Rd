@@ -22,4 +22,5 @@ sun_times(bat_data_frame)
 bat_data_frame <- tibble(Night = Sys.Date(), Latitude = -6.1370, Longitude = 106.8497)
 sun_times(bat_data_frame, time_zone = "Asia/Jakarta")
 
+
 }

@@ -13,7 +13,6 @@
 #'
 #'
 #'
-#'
 #' @export
 night_time_metrics <- function(bat_df) {
 
