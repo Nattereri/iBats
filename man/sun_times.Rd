@@ -4,10 +4,12 @@
 \alias{sun_times}
 \title{Sun times for the nights of bat observations}
 \usage{
-sun_times(bat_df, time_zone = "Europe/London")
+sun_times(bat_df, time_zone)
 }
 \arguments{
 \item{bat_df}{bat data frame with Night, Latitude and Longitude columns}
+
+\item{time_zone}{time zone location e.g. "Europe/London"}
 }
 \value{
 night and sun times data frame
@@ -17,7 +19,7 @@ Calculates the sunrise and sunset times for bat observations by Night (dusk to d
 }
 \examples{
 bat_data_frame <- tibble(Night = Sys.Date(), Latitude = 51.5023, Longitude = -0.1352)
-sun_times(bat_data_frame)
+sun_times(bat_data_frame, time_zone = "Europe/London")
 
 bat_data_frame <- tibble(Night = Sys.Date(), Latitude = -6.1370, Longitude = 106.8497)
 sun_times(bat_data_frame, time_zone = "Asia/Jakarta")
