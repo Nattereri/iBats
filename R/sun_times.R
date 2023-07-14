@@ -20,6 +20,12 @@
 #' @export
 sun_times <- function(bat_df, time_zone){
 
+  # check data is data.frame
+  stopifnot("data must be data frame" =  is.data.frame(bat_df))
+
+  #check Date column
+  stopifnot("Input must have Night column in date format" =  lubridate::is.Date(bat_df$Night))
+
   #check column names
   bat_df_col_names <- colnames(bat_df)
 
