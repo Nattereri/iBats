@@ -22,3 +22,9 @@ compares it with a reference scientific named character vector and returns the
 scientific  name of bat species using “binomial nomenclature” from the International
 Code of Zoological Nomenclature (ICZN)
 }
+\examples{
+look_up_vector <- c("45 pip" = "Pipistrellus pipistrellus", "bleb" = "Plecotus auritus")
+bat_vector_to_name <- c("45 pip", "45 pip", "45 pip", "bleb")
+make_scientific(look_up_vector, bat_vector_to_name)
+
+}

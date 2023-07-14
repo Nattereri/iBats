@@ -12,6 +12,11 @@
 #'
 #' @return Character Vector of scientific bat names
 #'
+#' @examples
+#' look_up_vector <- c("45 pip" = "Pipistrellus pipistrellus", "bleb" = "Plecotus auritus")
+#' bat_vector_to_name <- c("45 pip", "45 pip", "45 pip", "bleb")
+#' make_scientific(look_up_vector, bat_vector_to_name)
+#'
 #' @export
 make_scientific <- function(look_up_vector, bat_name_vector) {
 
@@ -19,7 +24,7 @@ make_scientific <- function(look_up_vector, bat_name_vector) {
   stopifnot("bat_name_vector must be character vector" = is.character(bat_name_vector))
 
   #Check for duplicates in look-up-list
-  look_up_duplicates(look_up_vector)
+  duplicate_bat_names(look_up_vector)
 
   #Tidy names up
   bat_name_tidy <- bat_name_vector %>%
