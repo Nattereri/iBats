@@ -5,7 +5,7 @@
 \alias{Static_G}
 \title{Data exported from BTO Acoustic Pipeline}
 \format{
-An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 1342 rows and 19 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 1342 rows and 19 columns.
 }
 \usage{
 data(Static_G)
