@@ -41,7 +41,7 @@ sun_times <- function(bat_df, time_zone){
 
 
     # Make a date vector of nights between first and last bat observation.
-    nightlist <- seq.Date(from=min(bat_df$Night),
+    nightlist <- seq.Date(from=min(bat_df$Night, na.rm = T),
                           length.out = num_nights + 1,
                           by='days')
 
