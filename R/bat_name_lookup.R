@@ -24,7 +24,7 @@ make_scientific <- function(look_up_vector, bat_name_vector) {
   stopifnot("bat_name_vector must be character vector" = is.character(bat_name_vector))
 
   #Check for duplicates in look-up-list
-  #duplicate_bat_names(look_up_vector)
+  duplicate_bat_names(look_up_vector)
 
   #Tidy names up
   bat_name_tidy <- bat_name_vector %>%

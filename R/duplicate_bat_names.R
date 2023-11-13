@@ -24,7 +24,7 @@ duplicate_bat_names <- function(look_up_list) {
   duplicates = paste0('"', duplicates, '"\n')
 
   if (length(duplicates) > 1) {
-    cat("Warning data has the following duplicates:\n\n", duplicates, "\nthese will not be found!\n")
+    cat("Warning bat name look list has the following duplicates:\n\n", duplicates, "\nthese will not be found!\n")
   }
 
 }
