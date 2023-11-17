@@ -40,6 +40,7 @@ bat_colours_default <- function(bat_column_to_graph){
       "Nyctalus noctula" = "#cab2d6",
       "Nyctalus leisleri" = "#fb9a99",
       "Nyctalus spp." = "#eee8cd",
+      "Nyctaloid" = "#3C533C",
       "Eptesicus serotinus" = "#008b8b"
     )
 

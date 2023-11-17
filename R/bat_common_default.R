@@ -36,6 +36,7 @@ bat_common_default <- function(UK_bat_scientific_names){
     "Myotis nattereri" = "Natterer's",
     "Nyctalus noctula" = "Noctule",
     "Nyctalus spp." = "Noctule or Leisler's",
+    "Nyctaloid" = "Noctule or Leisler's or Serotine",
     "Eptesicus serotinus" = "Serotine",
     "Pipistrellus pipistrellus" = "Common pipistrelle",
     "Pipistrellus pygmaeus" = "Soprano pipistrelle",
