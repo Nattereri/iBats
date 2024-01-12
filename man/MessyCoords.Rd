@@ -5,7 +5,7 @@
 \alias{MessyCoords}
 \title{A data.frame that specifies longitude and latitude coordinates in different formats.}
 \format{
-An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 2 rows and 2 columns.
+An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 4 rows and 2 columns.
 }
 \usage{
 data(MessyCoords)
