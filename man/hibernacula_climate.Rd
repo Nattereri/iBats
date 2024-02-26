@@ -12,6 +12,6 @@ data(hibernacula_climate)
 }
 \description{
 A time series of temperature, humidity and dew point recorded every hour throughout the winter
-in potential bat hibernacula located in southern Britain.
+for a potential bat hibernacula located in southern Britain.
 }
 \keyword{datasets}
